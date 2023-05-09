@@ -22,7 +22,7 @@ listint_t *insert_node(listint_t **head, int number)
 		*head = new_n;
 		return (new_n);
 	}
-	while ((*new_h).next && (*new_h).next.n < number)
+	while ((*new_h).next && (*new_h).next->n < number)
 		new_h = (*new_h).next;
 	(*new_n).next = (*new_h).next;
 	(*new_h).next = new_n;
