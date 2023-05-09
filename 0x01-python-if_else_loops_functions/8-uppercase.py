@@ -5,4 +5,3 @@ def uppercase(str):
             car = chr(ord(car) - 32)
         print("{}".format(car), end='')
     print()
-
