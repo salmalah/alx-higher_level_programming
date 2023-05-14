@@ -5,13 +5,13 @@
 /**
  * is_palindrome - A fucntion check if linked list is a palindrome
  * @head: the head of list
- * Return: 0 if failure,, 1 if a palindrome
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
 int is_palindrome(listint_t **head)
 {
 	listint_t *s = *head, *f = *head, *p = NULL, *temp;
 
-	if (!*head || (*head)->next)
+	if (*head || (*head)->next)
 		return (1);
 	while (f && (*f).next)
 	{
