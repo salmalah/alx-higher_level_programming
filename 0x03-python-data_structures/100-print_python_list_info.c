@@ -6,14 +6,13 @@
  * Return: nothing
  */
 
-
 void print_python_list_info(PyObject *p)
 {
-	PyListObject *list = (PyListObject *)p;
-	Py_ssize_t size = Py_SIZE(list);
+	Py_ssize_t list_size;
 	Py_ssize_t k;
 
-	printf("[*] Size of the Python List = %ld\n", size);
+	list_size = Py_SIZE(p);
+	printf("[*] Size of the Python List = %ld\n",list_size);
 	printf("[*] Allocated = %ld\n", list->allocated);
 
 	for (k = 0; k < size; k++)
