@@ -1,12 +1,13 @@
 #include <Python.h>
 
 /**
- * print_python_list_info - Prints basic info about Python lists.
- * @p: A PyObject list.
+ * print_python_list_info - A function that prints some basic info about Python lists
+ * @p: object types for Python
+ * Return: nothing
  */
 void print_python_list_info(PyObject *p)
 {
-	int size, alloc, i;
+	Py_ssize_t size, alloc, i;
 	PyObject *obj;
 
 	size = Py_SIZE(p);
