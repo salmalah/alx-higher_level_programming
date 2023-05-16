@@ -8,7 +8,8 @@
  */
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t size, alloc, i;
+	Py_ssize_t size, alloc;
+	int i;
 	PyObject *obj;
 
 	size = Py_SIZE(p);
