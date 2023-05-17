@@ -35,7 +35,7 @@ void print_python_list(PyObject *p)
  */
 void print_python_bytes(PyObject *p)
 {
-	unsigned char index = 0, size;
+	unsigned char index = 0, s;
 	PyVarObject *v;
 	PyBytesObject *byt= (PyBytesObject *)p;
 
@@ -49,14 +49,14 @@ void print_python_bytes(PyObject *p)
 	printf("  size: %ld\n", ((PyVarObject *)p)->ob_size);
 	printf("  trying string: %s\n", (*byt).ob_sval);
 	if ((*v).ob_size < 10)
-		size = (*v).ob_size + 1;
+		s = (*v).ob_size + 1;
 	else
-		size = 10;
-	printf("  first %d bytes: ", size);
-	while (index < size)
+		s = 10;
+	printf("  first %d bytes: ", s);
+	while (index < s)
 	{
 		printf("%02hhx", (*byt).ob_sval[index]);
-		if (index != (size - 1))
+		if (index != (s - 1))
 			printf(" ");
 		else
 			printf("\n");
