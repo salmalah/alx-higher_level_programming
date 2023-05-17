@@ -56,10 +56,10 @@ void print_python_bytes(PyObject *p)
 	while (index < size)
 	{
 		printf("%02hhx", (*byt).ob_sval[index]);
-		if (index == (size - 1))
-			printf("\n");
-		else
+		if (index != (size - 1))
 			printf(" ");
+		else
+			printf("\n");
 		index++;
 	}
 }
