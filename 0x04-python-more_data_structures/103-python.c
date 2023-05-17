@@ -52,7 +52,7 @@ void print_python_bytes(PyObject *p)
 	else
 	{
 		v = ((PyVarObject *)p);
-		size = (*v)ob_size + 1;
+		size = (*v).ob_size + 1;
 	}
 
 	printf("  first %d bytes: ", size);
