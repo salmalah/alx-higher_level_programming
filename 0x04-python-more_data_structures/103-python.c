@@ -39,7 +39,7 @@ void print_python_bytes(PyObject *p)
 	PyBytesObject *byt= (PyBytesObject *)p;
 
 	printf("[.] bytes object info\n");
-	if (strcmp((*p).ob_type.tp_name, "bytes"))
+	if (strcmp((*p).ob_type->tp_name, "bytes"))
 	{
 		printf("  [ERROR] Invalid Bytes Object\n");
 		return;
