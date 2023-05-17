@@ -1,6 +1,4 @@
 #include <Python.h>
-void print_python_list(PyObject *p);
-void print_python_bytes(PyObject *p);
 /**
  * print_python_list - A fucntion prints info about python list.
  * @p: A PyObject
