@@ -9,10 +9,10 @@ void print_python_list(PyObject *p)
 {
 	int a, s, index = 0;
 	const char *type;
-	PyListObject *list = (PyListObject *)p;
+	PyListObject *l = (PyListObject *)p;
 	PyVarObject *var = (PyVarObject *)p;
 
-	a = (*list).allocated;
+	a = (*l).allocated;
 	s = (*var).ob_size;
 
 	printf("[*] Python list info\n");
@@ -21,10 +21,10 @@ void print_python_list(PyObject *p)
 
 	while (index < s)
 	{
-		type = list->ob_item[index]->ob_type->tp_name;
+		type = l->ob_item[index]->ob_type->tp_name;
 		printf("Element %d: %s\n", index, type);
 		if (strcmp(type, "bytes") == 0)
-			print_python_bytes(list->ob_item[index]);
+			print_python_bytes(l->ob_item[index]);
 		index++;
 	}
 }
