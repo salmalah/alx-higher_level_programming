@@ -30,12 +30,12 @@ void print_python_list(PyObject *p)
 }
 
 /**
- * print_python_bytes - Prints basic info about Python byte objects.
- * @p: A PyObject byte object.
+ * print_python_bytes - A functio print python byte info
+ * @p: A PyObject
  */
 void print_python_bytes(PyObject *p)
 {
-	unsigned char i, size;
+	unsigned char index = 0, size;
 	PyBytesObject *bytes = (PyBytesObject *)p;
 
 	printf("[.] bytes object info\n");
@@ -54,12 +54,13 @@ void print_python_bytes(PyObject *p)
 		size = ((PyVarObject *)p)->ob_size + 1;
 
 	printf("  first %d bytes: ", size);
-	for (i = 0; i < size; i++)
+	while (index < size)
 	{
-		printf("%02hhx", bytes->ob_sval[i]);
-		if (i == (size - 1))
+		printf("%02hhx", bytes->ob_sval[index]);
+		if (index == (size - 1))
 			printf("\n");
 		else
 			printf(" ");
+		index++;
 	}
 }
