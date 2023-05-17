@@ -39,6 +39,7 @@ void print_python_bytes(PyObject *p)
 	PyVarObject *v;
 	PyBytesObject *byt= (PyBytesObject *)p;
 
+	v = ((PyVarObject *)p);
 	printf("[.] bytes object info\n");
 	if (strcmp((*p).ob_type->tp_name, "bytes"))
 	{
@@ -47,11 +48,10 @@ void print_python_bytes(PyObject *p)
 	}
 	printf("  size: %ld\n", ((PyVarObject *)p)->ob_size);
 	printf("  trying string: %s\n", (*byt).ob_sval);
-	if (((PyVarObject *)p)->ob_size > 10)
+	if ((*v).ob_size > 10)
 		size = 10;
 	else
 	{
-		v = ((PyVarObject *)p);
 		size = (*v).ob_size + 1;
 	}
 
