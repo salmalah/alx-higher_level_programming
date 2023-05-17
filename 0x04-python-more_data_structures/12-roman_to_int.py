@@ -8,7 +8,7 @@ def roman_to_int(roman_string):
     prev_value = 0
     for char in reversed(roman_string):
         value = diction.get(char, 0)
-        if value == 0:
+        if not value:
             return 0
 
         if value < prev_value:
