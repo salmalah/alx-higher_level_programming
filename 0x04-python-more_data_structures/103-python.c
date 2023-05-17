@@ -21,7 +21,7 @@ void print_python_list(PyObject *p)
 
 	while (index < s)
 	{
-		type = list->ob_item[i]->ob_type->tp_name;
+		type = list->ob_item[index]->ob_type->tp_name;
 		printf("Element %d: %s\n", index, type);
 		if (strcmp(type, "bytes") == 0)
 			print_python_bytes(list->ob_item[index]);
