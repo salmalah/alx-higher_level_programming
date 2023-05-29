@@ -9,4 +9,4 @@ def magic_calculation(a, b):
         except:
             po = b + a
             break
-        return po
+     return po
