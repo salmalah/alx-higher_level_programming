@@ -99,6 +99,6 @@ class Square:
         out = ""
         if self.size == 0:
             return out
-        strg = "\n" * self.position[1] + (" " * self.position[0] +
-                "#" * self.size + "\n") * self.size
-        return strg[:-1]
+        out = "\n" * self.position[1] + (" " * self.position[0] +
+                                          "#" * self.size + "\n") * self.size
+        return out[:-1]
