@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 This class that defines a square
 
 Attributes:
@@ -13,6 +13,7 @@ Methodes:
 
 
 class Square:
+    """Defines a square"""
     def __init__(self, size):
         """
         Initializes a new instance of the Square class.
