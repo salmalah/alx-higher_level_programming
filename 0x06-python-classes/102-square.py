@@ -62,31 +62,37 @@ class Square:
 
         """
         return self.__size * self.__size
+
     def __eq__(self, other):
         """
         Compares two squares if they are equqls
         """
         return self.area() == other.area()
+
     def __lt__(self, other):
         """
         check if the area of the current square is less than the area
         """
         return self.area() < other.area()
+
     def __le__(self, other):
         """
         check if the area of the current square is less than or equal the area
         """
         return self.area() <= other.area()
+
     def __ne__(self, other):
         """
         check two squares for inequality based on their areas
         """
         return self.area() != other.area()
+
     def __ge__(self, other):
         """
-        check if the area of the current square is greater than or equal to the area
+        check square is greater than or equal to the area
         """
         return self.area() >= other.area()
+
     def __gt__(self, other):
         """
         if the area of the current square is greater than the area
