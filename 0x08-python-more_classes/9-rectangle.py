@@ -133,6 +133,15 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
+    @classmethod
+    def square(cls, size=0):
+        """
+        method Creates a new Rectangle instance with equal width and height
+        Arg:
+           size: defult 0
+        """
+        return cls(size, size)
+
     def __str__(self):
         """
         methode  print the rectangle with the character
