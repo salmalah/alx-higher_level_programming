@@ -121,5 +121,5 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
-        sym = str(Rectangle.print_symbol)
+        sym = str(self.print_symbol)
         return "\n".join([sym * self.__width] * self.__height)
