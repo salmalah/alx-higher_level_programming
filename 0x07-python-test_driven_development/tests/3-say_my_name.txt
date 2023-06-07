@@ -1,0 +1,46 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+Importing the function from the module:
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Test passing No string as first name:
+	 >>> say_my_name(6, "Hello")
+	 Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Test passing no string as last name:
+	 >>> say_my_name("Salma", 98)
+	 Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Test passing None as argment for first name:
+         >>> say_my_name(None, "Hello")
+         Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Test passing list of string as last name:
+         >>> say_my_name("Zhk", ["h", "k", "j"])
+         Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Test with first_name and last_name:
+	 >>> say_my_name("Ely", "Mert")
+	 My name is Ely Mert
+
+Test passing 1 argument:
+	 >>> say_my_name("Salma")
+	 My name is Salma 
+
+Test passing more than 2 argments in function:
+	 >>> say_my_name("Tass", "zineb", "bilal")
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
