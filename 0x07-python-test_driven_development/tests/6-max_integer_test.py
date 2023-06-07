@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """Unittest for max_integer([..])
 """
+
+
 import unittest
 max_integer = __import__('6-max_integer').max_integer
+
 
 class TestMaxInteger(unittest.TestCase):
 
@@ -34,7 +37,7 @@ class TestMaxInteger(unittest.TestCase):
         """
         Test with long numbers
         """
-        self.assertEqual(max_integer([9299292909, 10000000000, 885888778]), 10000000000)
+        self.assertEqual(max_integer([10000000000, 885888778]), 10000000000)
 
     def test_duplicate_numbers(self):
         """
