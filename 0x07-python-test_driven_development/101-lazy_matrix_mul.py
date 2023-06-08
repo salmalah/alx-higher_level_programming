@@ -2,7 +2,7 @@
 """
 a function that multiplies 2 matrices by using the module NumPy
 """
-import numpy as n
+import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
@@ -14,4 +14,4 @@ def lazy_matrix_mul(m_a, m_b):
     Returns:
         multiple of matrix
     """
-    return (n.matmul(m_a, m_b))
+    return (np.matmul(m_a, m_b))
