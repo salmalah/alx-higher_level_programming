@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def matrix_mul(m_a, m_b):
     # Validate m_a and m_b
     if not isinstance(m_a, list) or not isinstance(m_b, list):
