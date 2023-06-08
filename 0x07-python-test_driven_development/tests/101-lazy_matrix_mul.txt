@@ -1,0 +1,17 @@
+The ``101-lazy_matrix_mul``
+==========================
+
+Use ``lazy_matrix_mul``
+-----------------------
+Usage
+====
+
+Importing the function from the module:
+       >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Testing Function
+-------------------
+
+       >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+       [[ 7 10]
+        [15 22]]
