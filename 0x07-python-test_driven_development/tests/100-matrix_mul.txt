@@ -70,6 +70,11 @@ Test passing different size in rows m_a:
 	 ...
 	 TypeError: each row of m_a must should be of the same size
 
+Test passing different size in rows m_b:
+         >>> matrix_mul([[9, 2], [8, 5]], [[2, 8, 6], [2, 4]])
+         Traceback (most recent call last):
+          ...
+         TypeError: each row of m_b must should be of the same size
 Checking for uneven m_b:
 	 >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4, 5]])
 	 Traceback (most recent call last):
