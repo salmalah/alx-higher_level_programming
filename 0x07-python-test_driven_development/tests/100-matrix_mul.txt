@@ -95,13 +95,13 @@ Test for uneven m_b:
 	 TypeError: each row of m_b must should be of the same size
 
 Pass string to list in m_a:
-	 >>> matrix_mul([[1, "6"], [4, 2]], [[5, 9], [6, 4]])
+	 >>> matrix_mul([[1, "Hi"], [4, 2]], [[5, 9], [6, 4]])
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: m_a should contain only integers or floats
 
 Test using string  in list m_b:
-	 >>> matrix_mul([[4, 2], [3, 4]], [[2, "6"], [9, 4]])
+	 >>> matrix_mul([[4, 2], [3, 4]], [[2, "Hi"], [9, 4]])
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: m_b should contain only integers or floats
