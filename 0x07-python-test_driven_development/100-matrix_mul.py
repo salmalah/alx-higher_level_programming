@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+Function that multiplies 2 matrices
+"""
 def matrix_mul(m_a, m_b):
+    """
+    Multiply two matrices.
+    """
     # Validate m_a and m_b
     if not isinstance(m_a, list) or not isinstance(m_b, list):
         raise TypeError("m_a must be a list or m_b must be a list")
