@@ -48,6 +48,8 @@ def matrix_mul(m_a, m_b):
                 raise ValueError("m_b can't be empty")
         if l3 != len(r):
             raise TypeError("each row of m_b must should be of the same size")
+        if type(e) is not int and type(e) is not float:
+            raise TypeError("m_b should contain only integers or floats")
         for e in r:
             if type(e) is not int and type(e) is not float:
                 raise TypeError("m_b should contain only integers or floats")
