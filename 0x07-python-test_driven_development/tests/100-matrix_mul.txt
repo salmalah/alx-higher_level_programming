@@ -40,12 +40,24 @@ Test usnig value non-list as m_a:
 	 ...
 	 TypeError: m_a must be a list
 
+Test usnig value non-list as m_b:
+         >>> matrix_mul([[1, 2], [3, 4]], None)
+         Traceback (most recent call last):
+         ...
+         TypeError: m_b must be a list
+
 Test pass string to m_b:
 	 >>> matrix_mul([[1, 2], [3, 4]], "hello")
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: m_b must be a list
 
+Test passing empty list m_a
+          >>> matrix_mul([], [[1, 2], [3, 4]])
+          Traceback (most recent call last):
+          ...
+          ValueError: m_a can't be empty
+          
 Test using empty list and rows:
 	 >>> matrix_mul([[], []], [[8, 2], [8, 4]])
 	 Traceback (most recent call last):
@@ -76,7 +88,7 @@ Test passing different size in rows m_b:
           ...
          TypeError: each row of m_b must should be of the same size
 
-Checking for uneven m_b:
+Test for uneven m_b:
 	 >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4, 5]])
 	 Traceback (most recent call last):
 	 ...
