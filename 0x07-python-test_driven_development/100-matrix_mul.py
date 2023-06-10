@@ -30,7 +30,7 @@ def matrix_mul(m_a, m_b):
             if l2 == 0:
                 raise ValueError("m_a can't be empty")
         if l2 != len(r):
-            raise TypeError("each row of m_a must should be of the same size")
+            raise TypeError("each row of m_a must be of the same size")
         for elem in r:
             if type(elem) is not int and type(elem) is not float:
                 raise TypeError("m_a should contain only integers or floats")
@@ -47,7 +47,7 @@ def matrix_mul(m_a, m_b):
             if l3 == 0:
                 raise ValueError("m_b can't be empty")
         if l3 != len(r):
-            raise TypeError("each row of m_b must should be of the same size")
+            raise TypeError("each row of m_b must be of the same size")
         for e in r:
             if type(e) is not int and type(e) is not float:
                 raise TypeError("m_b should contain only integers or floats")
