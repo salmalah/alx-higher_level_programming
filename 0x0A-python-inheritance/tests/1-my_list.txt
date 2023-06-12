@@ -62,5 +62,11 @@ using method:
        >>> my_list.print_sorted()
        ['Bro', 'Salma', 'Youn']
 
+give invalid argument to themethod:
+       >>> my_list.print_sorted(3)
+       Traceback (most recent call last):
+        ...
+       TypeError: print_sorted() takes 1 positional argument but 2 were given
+
 
 
