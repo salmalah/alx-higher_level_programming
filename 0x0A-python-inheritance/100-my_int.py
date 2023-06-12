@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+module class Myint
+"""
+
+
 class MyInt(int):
     """
     A class representing a rebel integer
@@ -31,4 +36,3 @@ class MyInt(int):
             True if the values are equal,or False
         """
         return super().__eq__(other)
-
