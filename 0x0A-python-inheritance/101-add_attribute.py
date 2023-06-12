@@ -6,7 +6,7 @@ Function adds attributes to an object
 
 def add_attribute(obj, name, value):
     """
-    Intialise functions 
+    Intialise functions
     Adds attributes
     """
     if '__dict__' not in dir(obj):
