@@ -4,7 +4,7 @@ The ``7-base_geometry.py``
 using ``7-base_geometry.py``
 --------------------------------
 
-Importing the function from the module:
+Importing the function frm the module:
        >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
        >>> bg = BaseGeometry()
 
