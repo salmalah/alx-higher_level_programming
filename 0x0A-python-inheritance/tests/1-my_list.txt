@@ -36,3 +36,10 @@ test using more than argument:
         ...
        TypeError: list expected at most 1 argument, got 2
 
+using emty list:
+       >>> my_list = MyList()
+       >>> print(my_list)
+       []
+       >>> my_list.print_sorted()
+       []
+
