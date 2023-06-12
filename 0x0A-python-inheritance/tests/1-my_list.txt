@@ -43,3 +43,11 @@ using emty list:
        >>> my_list.print_sorted()
        []
 
+using different type:
+       >>> my_list = MyList([1, "rmoe", "seleme", 4])
+       >>> my_list.print_sorted()
+       Traceback (most recent call last):
+        ...
+       TypeError: '<' not supported between instances of 'str' and 'int'
+
+
