@@ -26,3 +26,21 @@ test using no argments:
        Traceback (most recent call last):
         ...
        TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+test messing one arg:
+       >>> bg.integer_validator("no")
+       Traceback (most recent call last):
+        ...
+       TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+test using string value:
+       >>> bg.integer_validator("Me", "4")
+       Traceback (most recent call last):
+        ...
+       TypeError: Me must be an integer
+
+test using list in value:
+       >>> bg.integer_validator("Me", {3, 2})
+       Traceback (most recent call last):
+        ...
+       TypeError: Me must be an integer
