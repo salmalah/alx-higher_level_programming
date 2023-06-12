@@ -1,0 +1,22 @@
+The ``7-base_geometry.py``
+==============================
+
+using ``7-base_geometry.py``
+--------------------------------
+
+Importing the function from the module:
+       >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+       >>> bg = BaseGeometry()
+
+Using
+===============
+
+testing simple:
+       >>> bg.integer_validator("width", 89)
+
+
+test using age less than 0:
+       >>> bg.integer_validator("age", 0)
+       Traceback (most recent call last):
+        ...
+       ValueError: age must be greater than 0
