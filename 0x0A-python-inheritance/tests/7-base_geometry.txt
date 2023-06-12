@@ -44,3 +44,9 @@ test using list in value:
        Traceback (most recent call last):
         ...
        TypeError: Me must be an integer
+
+test using negative number:
+       >>> bg.integer_validator("distance", -4)
+       Traceback (most recent call last):
+        ...
+       ValueError: age must be greater than 0
