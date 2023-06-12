@@ -50,4 +50,17 @@ using different type:
         ...
        TypeError: '<' not supported between instances of 'str' and 'int'
 
+using list of string:
+       >>> my_list = MyList()
+       >>> my_list.append("Bro")
+       >>> my_list.append("Salma")
+       >>> my_list.append("Youn")
+       >>> print(my_list)
+       ['Bro', 'Salma', 'Youn']
+
+using method:
+       >>> my_list.print_sorted()
+       ['Bro', 'Salma', 'Youn']
+
+
 
