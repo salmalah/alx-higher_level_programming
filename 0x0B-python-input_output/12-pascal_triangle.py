@@ -18,7 +18,7 @@ def pascal_triangle(n):
         t = tr[-1]
         tp = [1]
         for v in range(len(t) - 1):
-            tmp.append(t[v] + t[v + 1])
+            tp.append(t[v] + t[v + 1])
         tp.append(1)
         tr.append(tp)
     return tr
