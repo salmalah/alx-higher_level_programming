@@ -8,7 +8,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 fs = "add_item.json"
 try:
-    ls = load_from_json_file(filename)
+    ls = load_from_json_file(fs)
 except Exception:
     ls = []
 ls += sys.argv[1:]
