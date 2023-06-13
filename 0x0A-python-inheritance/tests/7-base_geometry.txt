@@ -39,6 +39,27 @@ test using string value:
         ...
        TypeError: Me must be an integer
 
+using differnet value:
+       >>> bg.integer_validator("abs", None)
+       Traceback (most recent call last):
+       ...
+       TypeError: abs must be an integer
+
+       >>> bg.integer_validator("as", True)
+       Traceback (most recent call last):
+       ...
+       TypeError: as must be an integer
+
+       >>> bg.integer_validator("ab", [6])
+       Traceback (most recent call last):
+        ...
+       TypeError: ab must be an integer
+
+       >>> bg.integer_validator("mm", (8,))
+       Traceback (most recent call last):
+        ...
+       TypeError: mm must be an integer
+
 test using list in value:
        >>> bg.integer_validator("Me", {3, 2})
        Traceback (most recent call last):
