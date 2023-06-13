@@ -49,4 +49,4 @@ test using negative number:
        >>> bg.integer_validator("distance", -4)
        Traceback (most recent call last):
         ...
-       ValueError: age must be greater than 0
+       ValueError: distance must be greater than 0
