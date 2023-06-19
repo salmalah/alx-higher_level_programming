@@ -54,6 +54,18 @@ class Base:
                 ls = [n.to_dictionary() for n in list_objs]
                 jsfile.write(Base.to_json_string(ls))
 
+    @classmethod
+    def load_from_file(cls):
+        """
+        returns a list of instances
+        """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as f:
+                ls = Base.from_json_string(f.read())
+                return [cls.create(**d) for d in ls]
+        except FileNotFoundError:
+            return []
     @staticmethod
     def to_json_string(list_dictionaries):
         """
