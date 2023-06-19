@@ -3,6 +3,7 @@
 define a class Base"
 """
 import csv
+import turtle
 import json
 
 
@@ -43,6 +44,40 @@ class Base:
                 dm = cls(1)
             dm.update(**dictionary)
             return dm
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Create a turtle object
+        """
+        t = turtle.Turtle()
+        t.screen.bgcolor("lightgray")
+        t.pensize(5)
+        t.shape("turtle")
+        #Draw rectangle
+        t.bgcolor("red")
+        for r in list_rectangles:
+            t.showturtle()
+            t.up()
+            t.goto(r.x, r.y)
+            t.down()
+            for _ in range(2):
+                t.forward(r.width)
+                t.left(90)
+                t.forward(r.height)
+        # Draw squares
+        t.bgcolor("orange")
+        for s in list_squares:
+            t.showturtle()
+            t.up() 
+            t.goto(s.x, s.y)
+            t.down()
+            for _ in range(4):
+                t.forward(s.size)
+                t.left(90)
+            t.hideturtle()
+        t.exitonclick()
+
 
     @classmethod
     def save_to_file(cls, list_objs):
