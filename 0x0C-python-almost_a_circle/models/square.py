@@ -79,7 +79,7 @@ class Square(Rectangle):
         return [Square] (<id>) <x>/<y> - <size> - in our case, width or height
         """
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                self.width)
+                                                 self.width)
 
     def to_dictionary(self):
         """
