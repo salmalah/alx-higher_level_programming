@@ -3,6 +3,7 @@
 define a class Base"
 """
 
+
 class Base:
     """
     Base class
