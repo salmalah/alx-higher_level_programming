@@ -95,8 +95,10 @@ class Rectangle(Base):
         """
         prints in stdout the Rectangle instance with the character #
         """
+        for sf in range(self.y):
+            print()
         for m in range(self.height):
-            print("#" * self.width)
+            print(" " * self.x + "#" * self.width)
 
     def area(self):
         """
