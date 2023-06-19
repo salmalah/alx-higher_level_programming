@@ -100,6 +100,14 @@ class Rectangle(Base):
         for m in range(self.height):
             print(" " * self.x + "#" * self.width)
 
+    def update(self, *args):
+        """
+        assigns an argument to each attribute
+        """
+        elem = ["id", "width", "height", "x", "y"]
+        for f, ar in enumerate(args):
+            setattr(self, attributes[f], ar)
+
     def area(self):
         """
         public method that returns the area value of the Rectangle instance
