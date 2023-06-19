@@ -2,6 +2,7 @@
 """
 define a class Base"
 """
+import csv
 import json
 
 
@@ -64,6 +65,43 @@ class Base:
             with open(filename, "r") as f:
                 ls = Base.from_json_string(f.read())
                 return [cls.create(**d) for d in ls]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        class method
+        """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline="") as csvf:
+            if list_objs is None or list_objs == []:
+                cvsf.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                wr = csv.DictWriter(csvf, fieldnames=fieldnames)
+                for n in list_objs:
+                    wr.writerow(n.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        serializes and deserializes in CSV
+        """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r", newline="") as csvf:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                ls_d = csv.DictReader(csvf, fieldnames=fieldnames)
+                ls_d = [dict([r, int(o)] for r, o in d.items())
+                              for d in ls_d]
+                return [cls.create(**f) for f in ls_d]
         except FileNotFoundError:
             return []
 
