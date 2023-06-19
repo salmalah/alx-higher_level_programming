@@ -74,6 +74,3 @@ class Rectangle(Base):
         Setter method for the x attribute
         """
         self.__x = value
-
-
-
