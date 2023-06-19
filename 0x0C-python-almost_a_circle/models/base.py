@@ -30,7 +30,7 @@ class Base:
                 jsfile.write("[]")
             else:
                 ls = [n.to_dictionary() for n in list_objs]
-                jsfile.write(Base.to_json_string(list_dicts))
+                jsfile.write(Base.to_json_string(ls))
 
     @staticmethod
     def to_json_string(list_dictionaries):
