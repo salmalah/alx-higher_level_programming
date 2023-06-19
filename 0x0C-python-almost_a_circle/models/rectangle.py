@@ -106,7 +106,7 @@ class Rectangle(Base):
         """
         elem = ["id", "width", "height", "x", "y"]
         for f, ar in enumerate(args):
-            setattr(self, attributes[f], ar)
+            setattr(self, elem[f], ar)
 
     def area(self):
         """
