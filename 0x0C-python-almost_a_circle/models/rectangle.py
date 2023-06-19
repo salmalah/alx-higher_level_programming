@@ -91,6 +91,13 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
+    def display(self):
+        """
+        prints in stdout the Rectangle instance with the character #
+        """
+        for m in range(self.height):
+            print("#" * self.width)
+
     def area(self):
         """
         public method that returns the area value of the Rectangle instance
