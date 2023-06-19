@@ -66,6 +66,7 @@ class Base:
                 return [cls.create(**d) for d in ls]
         except FileNotFoundError:
             return []
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
