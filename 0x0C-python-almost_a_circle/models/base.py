@@ -25,11 +25,12 @@ class Base:
     def save_to_file(cls, list_objs):
         filename = cls.__name__ + ".json"
         ls = []
-        if list_objs is not None:
-            ls = [ob.to_dictionary() for ob in list_objs]
-        ls = cls.to_json_string(json_list)
-        with open(filename, "w") as file:
-            file.write(json_string)
+        with open(filename, "w") as jsfile:
+            if list_objs is None:
+                jsfile.write("[]")
+            else:
+                ls = [n.to_dictionary() for n in list_objs]
+                jsfile.write(Base.to_json_string(list_dicts))
 
     @staticmethod
     def to_json_string(list_dictionaries):
