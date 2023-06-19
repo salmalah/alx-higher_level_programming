@@ -100,13 +100,17 @@ class Rectangle(Base):
         for m in range(self.height):
             print(" " * self.x + "#" * self.width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         assigns an argument to each attribute
         """
-        elem = ["id", "width", "height", "x", "y"]
-        for f, ar in enumerate(args):
-            setattr(self, elem[f], ar)
+        if args:
+            elem = ["id", "width", "height", "x", "y"]
+            for f, ar in enumerate(args):
+                setattr(self, elem[f], ar)
+        else:
+            for k, va in kwargs.items():
+                setattr(self, k, va)
 
     def area(self):
         """
