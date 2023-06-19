@@ -13,9 +13,9 @@ class Rectangle(Base):
         """
         Intialize Class constructor
         """
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
