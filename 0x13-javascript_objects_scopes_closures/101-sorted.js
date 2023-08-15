@@ -6,7 +6,7 @@ for (const usId in originalD) {
   const occurrences = originalD[usId];
   if (!newD[occurrences]) {
     newD[occurrences] = [];
-  } 
+  }
   newD[occurrences].push(usId);
 }
 console.log(newD);
