@@ -15,7 +15,7 @@ if __name__ == "__main__":
                          passwd=pass_d, db=dab_name)
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name = %s ORDER BY states.id ASC",
-                    (s_name_searched, ))
+                (s_name_searched, ))
     rs = cur.fetchall()
     for r in rs:
         print(r)
