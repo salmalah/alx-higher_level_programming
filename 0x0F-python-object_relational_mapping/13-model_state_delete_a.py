@@ -21,3 +21,4 @@ if __name__ == "__main__":
         if "a" in s.name:
             ss.delete(s)
     ss.commit()
+    ss.close()
