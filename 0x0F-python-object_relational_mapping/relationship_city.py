@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """
-define module lists states"""
+define module lists states
+"""
 
 from sqlalchemy import Column, Integer, String, ForeignKey
-from relationship_state import Base
+from sqlalchemy.ext.declarative import declarative_base
+Base = declarative_base()
+
 
 class City(Base):
     """
