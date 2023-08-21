@@ -17,9 +17,10 @@ if __name__ == "__main__":
         u_name, pass_d, db_name), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     ss = Session()
-    c_by_state = ss.query(City, State).\
-                filter(City.state_id == State.id).all()
+    c_by_state = ss.query(City, State) \
+         .filter(City.state_id == State.id) \
+            .order_by(City.id)
     for st, c in c_by_state:
-        print("{}: ({}) {}".format(st.name, c.id, c.name))
+        print("{}: ({}) {}".format(c.name, c.id, st.name))
     ss.commit()
     ss.close()
