@@ -10,6 +10,7 @@ if __name__ == "__main__":
     u = sys.argv[1]
     try:
         re = r.get(u)
+        re.raise_for_status()
         content = re.text
         print(content)
     except r.exceptions.HTTPError as m:
