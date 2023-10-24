@@ -12,8 +12,8 @@ request.get(url, (err, response, body) => {
   const charac = JSON.parse(body).characters;
   charac.forEach((url) => {
     request.get(url, (error, response, body) => {
-      if (err) {
-        console.log(err);
+      if (error) {
+        console.log(error);
         return;
       }
       console.log(JSON.parse(body).name);
